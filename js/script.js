@@ -1,5 +1,5 @@
 //Variables
-var computerMove, playerMove, randomNumber;
+var computerMove, playerMove, randomNumber, playerInput;
 
 randomNumber = Math.floot(Math.random() * 3 + 1);
 console.log("Twoja wylosowana liczba to:" + randomNumber);
@@ -12,5 +12,3 @@ if(randomNumber == '1') {
 } else {
     computerMove = "nieznany ruch";
 }
-
-printMessage('Mój ruch: ' + computerMove);
