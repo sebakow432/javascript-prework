@@ -3,16 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>Kamień, papier, nożyce</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="sass/style.css">
     </head>
     <body>
         <div class="container">
-            <div id="buttons">
-                <button type="text" id="button-rock">Kamień</button>
-                <button type="text" id="button-paper">Papier</button>
-                <button type="text" id="button-scissors">Nożyce</button>
+            <h1>Gra "papier kamień i nożyce"</h1>
+            <h2>Wybierz swój ruch:</h2>
+            <div id="buttons" class="button-box">         
+                <button class="btn" type="text" id="button-rock">
+                    <img src="https://i.postimg.cc/5Nzr68Zs/2.png">
+                </button>
+                <button class="btn" type="text" id="button-paper">
+                    <img src="https://i.postimg.cc/q7Fcs5Ky/images.png">
+                </button>
+                <button class="btn" type="text" id="button-scissors">
+                    <img src="https://i.postimg.cc/RFjRBDV4/nozyce2.png">
+                </button>   
             </div>
-            <div id="messages"></div>
+            <div id="messages" class="msg">Aby rozpocząć grę wybierz swój ruch!:)</div>
         </div>
         <script src="js/functions.js"></script>
         <script src="js/script.js"></script>
