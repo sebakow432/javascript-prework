@@ -1,5 +1,5 @@
 //Variables
-var playerMove, computerMove, argButtonName, getMoveName, randomNumber, pointWin=0, pointGame=0, pointLose=0;
+let pointWin=0, pointGame=0, pointLose=0;
 
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
@@ -23,7 +23,7 @@ function displayResult(argPlayerMove, argComputerMove) {
     pointLose++;
     pointGame++;
   }
-  printMessage('Przeciwnik zagrał ' + argComputerMove + ', a Ty ' + playerMove);
+  printMessage('Przeciwnik zagrał ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
 
 buttonRock = document.getElementById('button-rock');
@@ -33,6 +33,8 @@ buttonScissors = document.getElementById('button-scissors');
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
+
+  let randomNumber, playerMove, computerMove;
   randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('wylosowana liczba to: ' + randomNumber);
   if (randomNumber == '1') {
@@ -40,7 +42,7 @@ function buttonClicked(argButtonName) {
   } else if(randomNumber == '2') {
     computerMove = "papier";
   } else if(randomNumber=="3") {
-    computerMove = 'nozyce';
+    computerMove = 'nożyce';
   } else {
     computerMove = 'nieznany ruch';
   }
